@@ -1,0 +1,14 @@
+services:
+  maindb:
+    image: postgres
+    ports:
+      - 5050:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  mainadminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

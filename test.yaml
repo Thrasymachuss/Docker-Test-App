@@ -1,0 +1,14 @@
+services:
+  testdb:
+    image: postgres
+    ports:
+      - 5051:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  testadminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
